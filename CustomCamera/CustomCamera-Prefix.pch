@@ -1,0 +1,30 @@
+//
+//  CustomCamera-Prefix.pch
+//  CustomCamera
+//
+//  Created by Adriano Braga Alencar on 27/03/15.
+//  Copyright (c) 2015 YattaTech. All rights reserved.
+//
+
+#ifndef CustomCamera_CustomCamera_Prefix_pch
+#define CustomCamera_CustomCamera_Prefix_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
+
+#define CUSTOM_WRITER
+//#define CUSTOM_FILE_WRITER
+#define DELETE_FILE(f) [[NSFileManager defaultManager]removeItemAtURL:url error:nil]
+
+typedef void (^DidConfigFinish)(AVCaptureVideoOrientation orientation);
+typedef void (^DidVideoSave)   (NSURL *url);
+typedef void (^DidExportComplete)(void);
+
+const NSUInteger MaxDuration = 6000;
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
